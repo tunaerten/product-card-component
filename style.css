@@ -105,6 +105,10 @@ body {
   cursor: pointer;
 }
 
+.btn:hover {
+  background-color: #243f32;
+}
+
 a:link,
 a:visited,
 a:hover,
