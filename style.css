@@ -105,6 +105,15 @@ body {
   cursor: pointer;
 }
 
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
 @media (min-width: 62.5rem) {
   .img__mobile {
     display: none;
