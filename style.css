@@ -1,0 +1,145 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --dark-cyan-clr: hsl(158, 36%, 37%);
+  --cream-clr: hsl(30, 38%, 92%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  font-family: "Montserrat", "Fraunces", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: var(--dark-grayish-blue);
+  background-color: var(--cream-clr);
+}
+
+.card {
+  width: 343px;
+  padding: 1em;
+}
+.img__mobile {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.img__desktop {
+  display: none;
+}
+
+.card__info {
+  background-color: var(--white);
+  padding-bottom: 1em;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+.tag {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  padding: 2em 0 1em 0;
+  font-size: 0.7em;
+  font-weight: 400;
+}
+.card__header {
+  font-family: "Fraunces";
+  line-height: 1;
+  font-size: 1.8rem;
+  font-weight: 650;
+  color: var(--very-dark-blue);
+}
+.card__text {
+  font-size: 0.8em;
+  padding: 1em 0;
+  line-height: 1.5;
+  max-width: 265px;
+}
+.prices {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  padding: 1em 0;
+}
+.price__current {
+  font-family: "Fraunces";
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--dark-cyan-clr);
+}
+.price__old {
+  font-size: 0.8rem;
+  text-decoration: line-through;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  border: none;
+  color: var(--white);
+  background-color: var(--dark-cyan-clr);
+  width: 100%;
+  font-family: "Montserrat";
+  padding: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media (min-width: 62.5rem) {
+  .img__mobile {
+    display: none;
+  }
+  .img__desktop {
+    display: block;
+    height: 450px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+  .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 620px;
+  }
+  .card__info {
+    height: 450px;
+    padding: 0.5em 1em;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 10px;
+  }
+  .tag {
+    padding: 2em 0 2em 0;
+  }
+  .card__header {
+    padding: 0.2em 0;
+  }
+  .card__text {
+    width: 95%;
+    padding: 1.5em 0;
+    line-height: 1.8;
+  }
+  .prices {
+    padding: 0.5em 0 1.5em 0;
+    gap: 20px;
+  }
+}
